@@ -1,12 +1,8 @@
-#
-# Copyright (C) 2025 The Android Open Source Project
-# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 LOCAL_PATH := $(call my-dir)
-
-ifeq ($(TARGET_DEVICE),trinket)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-endif
+include $(CLEAR_VARS)
+LOCAL_MODULE := bootctrl.trinket
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_SUFFIX := .a
+LOCAL_SRC_FILES := bootctrl/dummy.c
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_STATIC_LIBRARY)

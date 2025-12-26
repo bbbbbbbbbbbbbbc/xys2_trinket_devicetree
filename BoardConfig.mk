@@ -17,7 +17,9 @@ AB_OTA_PARTITIONS += \
     vendor \
     system_ext \
     system
-BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_USES_RECOVERY_AS_BOOT := false
+BOARD_VIRTUAL_AB_OTA := true
+BOARD_DYNAMIC_PARTITION_ENABLE := true
 
 # Architecture
 TARGET_ARCH := arm64
